@@ -1,0 +1,170 @@
+% -----------------------------------------------
+% Resume in Latex
+% Author:       Michael Nichols
+% Template:     https://github.com/jakegut/resume
+% License:      MIT
+% -----------------------------------------------
+
+\documentclass[letterpaper, 11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage[urlbordercolor={}, pdfborderstyle={/S/U/W 1}]{hyperref}
+
+\input{glyphtounicode}
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Adjust margins
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\textheight}{1in}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\urlstyle{same}
+
+% Sections formatting
+\titleformat{\section}{
+    \vspace{-10pt}
+    \scshape\raggedright\large
+}{}{0em}{}[
+    \color{black}\titlerule
+    \vspace{-5pt}
+]
+
+% Environments and commands
+% TODO: macros
+\newenvironment{cventries}{
+    \begin{itemize}[leftmargin=0.15in, parsep=0pt, label={}]
+}{
+    \end{itemize}
+}
+
+\newenvironment{cvdescriptions}{
+    \begin{description}[leftmargin=0.15in, labelindent=0.15in, parsep=0pt, itemsep=1pt]
+        \small
+}{
+    \end{description}
+}
+
+\newenvironment{cvitems}{
+    \begin{itemize}[rightmargin=0.1in, parsep=0pt, topsep=2pt, label=$\vcenter{\hbox{\tiny$\bullet$}}$]
+        \small
+}{
+    \end{itemize}
+}
+
+\newcommand{\cventry}[4]{
+    \item
+        \vspace{-2pt}
+        \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+            \textbf{#1} & #2 \\
+            \small\textit{#3} & \small\textit{#4} \\
+        \end{tabular*}
+}
+
+\newcommand{\cvminorentry}[3]{
+    \item
+        \vspace{-2pt}
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+            \small\textbf{#1} $|$ \textit{#2} & \small\textit{#3} \\
+        \end{tabular*}
+}
+
+% Resume スタート
+\begin{document}
+
+% Heading
+\begin{center}
+    \Huge\textbf{Michael Nichols} \\[1pt]
+    \small\href{tel:+1-210-544-2145}{+1 (210) 544-2145}
+        $|$ \href{mailto:mjnichols10@yahoo.com}{mjnichols10@yahoo.com}
+        $|$ \href{https://github.com/michaelnichxls}{github.com/michaelnichxls}
+        $|$ Lewisville, TX, United States \\[20pt]
+\end{center}
+
+\section{Profile}
+\begin{cventries}
+    \small
+    \item
+        Product specialist with a strong background in marketing, leveraging comprehensive product knowledge---from technical specifications to practical applications---to drive sales and expand market reach.
+        Skilled in analyzing performance trends, cross-functional collaboration, and adapting across technical and non-technical roles, with special experience streamlining workflows and boosting productivity through applied computer science.
+\end{cventries}
+
+\section{Experience}
+\begin{cventries}
+    \cventry{HD Intelligence}{Remote}{Product Intern}{Oct 2024 -- Present}
+    \begin{cvitems}
+        \item Contributes to the development of NBA-level performance analytics for college basketball to deliver competitive insights to clients
+        \item Applies computer science to automate workflows, boosting productivity more than tenfold
+        % \item Collaborates with team members across different departments to meet product deadlines and maintain project quality standards
+    \end{cvitems}
+    
+    \cventry{Winn-Dixie}{Alexander City, AL}{Deli Associate, Bakery Associate, Seafood Associate}{Apr 2022 -- Aug 2022}
+    \begin{cvitems}
+        \item Tailored product specifications and applications to customer needs, achieving a 20\% sales increase
+        \item Operated and maintained specialized equipment safely, adhering to strict safety standards to minimize risks
+        \item Maintained product quality and cleanliness, coordinated with team members, and managed stock levels to maintain seamless workflow
+    \end{cvitems}
+    
+    \cventry{Great Northwest Community Improvement Association}{San Antonio, TX}{Gate Attendant}{Summer 2020}
+    \begin{cvitems}
+        \item Managed guest admission at community pool, enforcing security and fostering a welcoming environment
+        \item Provided personalized customer service by assisting guests with questions and concerns
+        \item Operated cash register and handled all monetary transactions accurately, minimizing discrepancies
+    \end{cvitems}
+\end{cventries}
+
+% TODO: GPA
+\section{Education}
+\begin{cventries}
+    \cventry{Earl Warren High School}{San Antonio, TX}{Diploma}{Aug 2017 -- Jun 2021}
+\end{cventries}
+
+\section{Projects}
+\begin{cventries}
+    \cvminorentry{Rolodex}{Google Sheets, Python}{Jan 2025 -- Present}
+    \begin{cvitems}
+        \item Develops an AI-powered contact management tool that automatically retrieves and organizes client information from the web into Google Sheets, reducing a month of manual data entry to 30 minutes
+        \item Evaluates performance benchmarks to identify opportunities for optimizing data accuracy
+    \end{cvitems}
+    
+    \cvminorentry{Wan$\cdot$ko}{OpenAI Whisper, Character.AI, Unity Game Engine, C\#, Python}{Oct 2023 -- Present}
+    \begin{cvitems}
+        \item Develops an interactive virtual puppy companion that uses AI-based natural language processing to converse and offer emotional support to users
+        \item Designs lifelike character animations that dynamically respond to conversations, enhancing immersion and boosting user engagement
+    \end{cvitems}
+\end{cventries}
+
+\section{Certifications}
+\begin{cventries}
+    \cvminorentry{Deep Learning Specialization}{Coursera}{Jul 2023}
+    % \begin{cvitems}
+    %     \item Neural Networks and Deep Learning
+    %     \item Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization
+    %     \item Structuring Machine Learning Projects
+    %     \item Convolutional Neural Networks
+    %     \item Sequence Models
+    % \end{cvitems}
+    
+    \cvminorentry{Food Handler}{Learn2Serve}{Mar 2023 -- Mar 2026}
+\end{cventries}
+
+\section{Skills}
+\begin{cvdescriptions}
+    \item[Languages:] English, Japanese
+    \item[Programming Languages:] C\#, Python, Lua, Java
+    \item[Data Analytics Tools:] SQL, R, Jupyter, \LaTeX
+    \item[Software:] Microsoft Office Suite (Word, Excel, PowerPoint), Google Workspace (Docs, Sheets, Slides, Cloud), VS Code, Visual Studio, IntelliJ IDEA
+    % \item[Soft Skills:] Growth Mindset, Detail-Oriented, Problem-Solving, Critical Thinking, Adaptability, Time Management, Communication, Teamwork, Crisis Intervention
+\end{cvdescriptions}
+
+\end{document}

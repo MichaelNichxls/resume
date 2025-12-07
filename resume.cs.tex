@@ -1,0 +1,168 @@
+% -----------------------------------------------
+% CS Resume in Latex
+% Author:       Michael Nichols
+% Template:     https://github.com/jakegut/resume
+% License:      MIT
+% -----------------------------------------------
+
+\documentclass[letterpaper, 11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage[urlbordercolor={}, pdfborderstyle={/S/U/W 1}]{hyperref}
+
+\input{glyphtounicode}
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Adjust margins
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\textheight}{1in}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\urlstyle{same}
+
+% Sections formatting
+\titleformat{\section}{
+    \vspace{-10pt}
+    \scshape\raggedright\large
+}{}{0em}{}[
+    \color{black}\titlerule
+    \vspace{-5pt}
+]
+
+% Environments and commands
+% TODO: macros
+\newenvironment{cventries}{
+    \begin{itemize}[leftmargin=0.15in, parsep=0pt, label={}]
+}{
+    \end{itemize}
+}
+
+\newenvironment{cvdescriptions}{
+    \begin{description}[leftmargin=0.15in, labelindent=0.15in, parsep=0pt, itemsep=1pt]
+        \small
+}{
+    \end{description}
+}
+
+\newenvironment{cvitems}{
+    \begin{itemize}[rightmargin=0.1in, parsep=0pt, topsep=2pt, label=$\vcenter{\hbox{\tiny$\bullet$}}$]
+        \small
+}{
+    \end{itemize}
+}
+
+\newcommand{\cventry}[4]{
+    \item
+        \vspace{-2pt}
+        \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+            \textbf{#1} & #2 \\
+            \small\textit{#3} & \small\textit{#4} \\
+        \end{tabular*}
+}
+
+\newcommand{\cvminorentry}[3]{
+    \item
+        \vspace{-2pt}
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+            \small\textbf{#1} $|$ \textit{#2} & \small\textit{#3} \\
+        \end{tabular*}
+}
+
+% Resume スタート
+\begin{document}
+
+% Heading
+\begin{center}
+    \Huge\textbf{Michael Nichols} \\[1pt]
+    \small\href{tel:+1-210-544-2145}{+1 (210) 544-2145}
+        $|$ \href{mailto:mjnichols10@yahoo.com}{mjnichols10@yahoo.com}
+        $|$ \href{https://github.com/michaelnichxls}{github.com/michaelnichxls}
+        $|$ Lewisville, TX, United States \\[20pt]
+\end{center}
+
+\section{Profile}
+\begin{cventries}
+    \small
+    \item
+        Software developer with experience building AI-powered applications, automation tools, and interactive games.
+        Strong foundation in Python and C\#, with hands-on expertise in computer vision, NLP, and web automation.
+        Passionate about translating new technical knowledge into practical solutions and novel user experiences.
+\end{cventries}
+
+\section{Experience}
+\begin{cventries}
+    \cventry{HD Intelligence}{Remote}{Product Intern}{Oct 2024 -- Present}
+    \begin{cvitems}
+        \item Contributes to the development of NBA-level performance analytics for college basketball to deliver competitive insights to clients
+        \item Builds Python automation tools leveraging computer vision with MediaPipe/OpenCV and web automation with Selenium, reducing manual data-processing time by over 90\%
+        \item Utilizes Google Workspace APIs to streamline data management workflows
+        \item Evaluates performance benchmarks to identify opportunities for optimizing data accuracy
+    \end{cvitems}
+    
+    \cventry{Great Northwest Community Improvement Association}{San Antonio, TX}{Gate Attendant}{Summer 2020}
+    \begin{cvitems}
+        \item Managed and logged guest admission, enforcing security and fostering a welcoming environment
+        \item Operated a POS system, maintaining accurate transaction records with zero discrepancies
+        \item Provided personalized customer service by identifying issues and communicating resolutions clearly
+    \end{cvitems}
+\end{cventries}
+
+% TODO: GPA
+\section{Education}
+\begin{cventries}
+    \cventry{Earl Warren High School}{San Antonio, TX}{Diploma}{Aug 2017 -- Jun 2021}
+\end{cventries}
+
+\section{Projects}
+\begin{cventries}
+    \cvminorentry{Headshots}{Python, MediaPipe/OpenCV, Selenium, Google Workspace APIs}{Oct 2025 -- Present}
+    \begin{cvitems}
+        \item Develops an AI-powered tool that automatically retrieves athlete headshots from the web, utilizing MediaPipe/OpenCV for real-time face detection and precise image cropping, reducing an hour of manual data-processing to a few minutes
+        \item Integrates with Google Drive API to manage and organize output images, streamlining workflow
+    \end{cvitems}
+
+    % \cvminorentry{Rolodex}{Python, Selenium, Google Workspace APIs}{Jan 2025 -- Present}
+    % \begin{cvitems}
+    %     \item Develops a contact management tool that automatically retrieves and organizes client information from the web into Google Sheets, reducing a month of manual data entry to 30 minutes
+    %     \item Evaluates performance benchmarks to identify opportunities for optimizing data accuracy
+    % \end{cvitems}
+    
+    \cvminorentry{Wan$\cdot$ko}{C\#, Python, Unity, OpenAI Whisper API, Character.AI API}{Oct 2023 -- Present}
+    \begin{cvitems}
+        \item Develops an interactive virtual puppy companion using NLP to converse and offer emotional support to users
+        \item Designs lifelike character animations that dynamically respond to conversations, enhancing immersion and boosting user engagement
+    \end{cvitems}
+\end{cventries}
+
+\section{Certifications}
+\begin{cventries}
+    \cvminorentry{Deep Learning Specialization}{Coursera}{Jul 2023}
+    \begin{cvitems}
+        \item Neural Networks and Deep Learning
+        \item Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization
+        \item Structuring Machine Learning Projects
+        \item Convolutional Neural Networks
+        \item Sequence Models
+    \end{cvitems}
+\end{cventries}
+
+\section{Skills}
+\begin{cvdescriptions}
+    \item[Languages:] C\#, C/C++, Python, Lua, Java, SQL, R, \LaTeX
+    \item[Developer Tools:] Git, GitHub, GCP, VS Code, Visual Studio, IntelliJ IDEA
+    \item[Productivity Tools:] Google Workspace, Microsoft Office Suite
+    \item[Natural Languages:] English, Japanese
+\end{cvdescriptions}
+
+\end{document}

@@ -1,0 +1,6 @@
+{
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "files.exclude": {
+        "**/*.synctex.gz": true
+    }
+}
